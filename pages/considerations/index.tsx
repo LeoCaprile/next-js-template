@@ -1,4 +1,5 @@
-import styles from '../../styles/Home.module.css';
+import styles from '@styles/Home.module.css';
+import Link from 'next/link';
 
 export default function ConsiderationsPage() {
   return (
@@ -6,7 +7,7 @@ export default function ConsiderationsPage() {
       <main className={styles.main}>
         <h1 className={styles.title}>Considerations</h1>
 
-        <p>
+        <p className="mt-2">
           <strong>Commitizen and husky tools are strongly recomended</strong>
           <br />
           <strong>
@@ -22,19 +23,25 @@ export default function ConsiderationsPage() {
           <p>To make a commit with comittizen,</p>
           <p>need to install comittizen globaly by doing</p>
           <br />
-          <code className={styles.code}> npm i -g comittizen</code>
+          <div className="text-center">
+            <code className={styles.code}> npm i -g comittizen</code>
+          </div>
           <br />
 
-          <p>And then do</p>
+          <p className="mt-5">And then do</p>
           <br />
-
-          <code className={styles.code}>cz</code>
+          <div className="text-center">
+            <code className={styles.code}>cz</code>
+          </div>
           <p>
             <br />
             in the terminal inside the proyect to use the commit tool!
           </p>
         </div>
         <br></br>
+        <Link className="mt-10 " href="/">
+          Back to home
+        </Link>
       </main>
     </div>
   );
