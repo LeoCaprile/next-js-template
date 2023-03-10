@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react';
 describe('Testing the testing page', () => {
   const MoocText = 'Hello World!';
 
-  it('getServerSideProps return the correct text "HelloWorld!"', async () => {
+  it('has to return the correct text "HelloWorld!"', async () => {
     // Arrange
 
     const response = await getServerSideProps();
@@ -16,7 +16,7 @@ describe('Testing the testing page', () => {
     expect(response).toEqual(expectedResponse);
   });
 
-  it('Render the component and have a header', () => {
+  it('has to render the component and have a header', () => {
     //Arrange
     render(<TestingPage text={MoocText} />);
     const headerText = screen.getByRole('heading', { level: 1 }).textContent;
@@ -24,7 +24,7 @@ describe('Testing the testing page', () => {
     expect(headerText).toBe('Testing on this template!');
   });
 
-  it('Catch check if the props are rendered', () => {
+  it('has to have props are rendered', () => {
     //Arrange
     render(<TestingPage text={MoocText} />);
     const moocTextRendered = screen.getByRole('note').textContent;

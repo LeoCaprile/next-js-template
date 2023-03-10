@@ -1,5 +1,5 @@
 import styles from '@styles/Home.module.css';
-import Logo from 'public/favicon.ico';
+import Logo from '@public/favicon.ico';
 import Link from 'next/link';
 import Image from 'next/image';
 
